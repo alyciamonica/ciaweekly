@@ -1,17 +1,16 @@
-/* RESET SEDERHANA */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #b7b1b195;
     margin: 20px;
 }
 
-/* JUDUL */
+
 h1, h2 {
     text-align: center;
     color: #333;
 }
 
-/* NAVBAR */
 nav {
     text-align: center;
     margin: 15px 0;
@@ -34,7 +33,7 @@ nav a.active {
     background-color: #bcbcbc;
 }
 
-/* TABLE */
+
 table {
     border-collapse: collapse;
     margin: 15px auto;
@@ -50,13 +49,13 @@ table th {
     background-color: #ddd;
 }
 
-/* GAMBAR */
+
 img {
     display: block;
     margin: 10px auto;
 }
 
-/* BUTTON */
+
 button {
     padding: 6px 10px;
     background-color: #ccc;
@@ -68,7 +67,7 @@ button:hover {
     background-color: #bbb;
 }
 
-/* FORM */
+
 form {
     width: 70%;
     margin: 20px auto;
@@ -81,7 +80,7 @@ input, [type="file"] {
     box-sizing: border-box; 
 }
 
-/* PARAGRAF */
+
 p {
     text-align: center;
 }
