@@ -9,13 +9,13 @@
 <body>
     <h2>Tambah Data Mahasiswa</h2>
     <nav>
-        <a href="index.html" class="active">Beranda</a>
-        <a href="biodata.html">Biodata</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="mahasiswa.html">Data Mahasiswa</a></td>
-        <a href="tambahdata.html">Tambah Data</a></td>
+        <a href="index.php" class="active">Beranda</a>
+        <a href="biodata.php">Biodata</a>
+        <a href="tentang.php">Tentang</a>
+        <a href="mahasiswa.php">Data Mahasiswa</a></td>
+        <a href="tambahdata.php">Tambah Data</a></td>
     </nav>
-    <form action = "mahasiswa.html" method="">
+    <form action = "mahasiswa.php" method="">
         <table cellpadding ="5px">
             <tr>
                 <td><label for="nama">Nama</label></td>

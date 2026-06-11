@@ -5,11 +5,11 @@
     </title>
      <link rel="stylesheet" href="asset/css/style.css">
      <nav>
-        <a href="index.html" class="active">Beranda</a>
-        <a href="biodata.html">Biodata</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="mahasiswa.html">Data Mahasiswa</a></td>
-        <a href="tambahdata.html">Tambah Data</a></td>
+        <a href="index.php" class="active">Beranda</a>
+        <a href="biodata.php">Biodata</a>
+        <a href="tentang.php">Tentang</a>
+        <a href="mahasiswa.php">Data Mahasiswa</a></td>
+        <a href="tambahdata.php">Tambah Data</a></td>
     </nav>
    </head> 
    <body>

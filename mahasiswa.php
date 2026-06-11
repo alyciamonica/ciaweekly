@@ -12,50 +12,59 @@
     </h1>
     <table border = "1" align = "center" cellspacing = "0" cellpadding = "10px">
         <tr>
-            <td><a href="index.html">Beranda </a></td>
-            <td><a href="biodata.html">Biodata</a></td>
-            <td><a href="tentang.html">Tentang</a></td>
-            <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
-            <td><a href="tambahdata.html">Tambah Data</a></td>
+            <td><a href="index.php">Beranda </a></td>
+            <td><a href="biodata.php">Biodata</a></td>
+            <td><a href="tentang.php">Tentang</a></td>
+            <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
+            <td><a href="tambahdata.php">Tambah Data</a></td>
         </tr>
     </table>
     <h2>
         DATA MAHASISWA
     </h2>
-    <a href ="tambahdata.html">
+    <a href ="tambahdata.php">
         <button> Tambah data </button>
     </a>
     <table border = "1" cellpadding ="5">
     <tr>
-        <th rowspan = "2"> No </th>
-        <th rowspan = "2"> Nama </th>
-        <th rowspan ="2"> NIM </th>
-        <th rowspan = "2"> Foto </th>
-        <th colspan= "3"> Nilai </th>
-        <!-- <td> baris 1 kolom 2</td> -->
+        <th> No </th>
+        <th> Nama </th>
+        <th> NIM </th>
+        <th> Jurusan </th>
+        <th> Email </th>
+        <th> No.HP </th>
+        <th> Foto </th>
+        <th> Aksi </th>
     </tr>
-    <tr>
-        <!-- <td> baris 2 kolom 1</td> -->
-        <th> UTS </th>
-        <th> UAS </th>
-        <th> Tugas </th>
-    </tr>
+    
     <tr>
         <td>1</td>
         <td>Alycia Monica Devi</td>
         <td>13242520037</td>
+        <td  align= "center" > Teknologi Informasi </td>
+        <td  align= "center" > alyciamonicadevi@gmail.com </td>
+        <td  align= "center" > 081233634673</td>
         <td><img src="asset/image/cia.jpg" width="70px" /></td>
-        <td  align= "center" > 90 </td>
-        <td  align= "center" > 90 </td>
-        <td  align= "center" > 90 </td>
+
+         <td>
+            <a href ="editdata.php"><button>Edit</button></a>
+            <a href ="deletedata.php"><button>Hapus</button></a>
+        </td>
+        
     <tr>
         <td>1</td>
-        <td>Elvanda Sri Utami</td>
-        <td>13242520024</td>
+        <td>Marcel Bima </td>
+        <td>13242545672</td>
+        <td  align= "center" > Teknik Sipil </td>
+        <td  align= "center" > marcelbima@gmail.com </td>
+        <td  align= "center" > 081234535671 </td>
         <td><img src="asset/image/cia.jpg" width="70px" /></td>
-        <td  align= "center" > 90 </td>
-        <td  align= "center" > 90 </td>
-        <td  align= "center" > 90 </td>
+
+        <td>
+            <a href ="editdata.php"><button>Edit</button></a>
+            <a href ="deletedata.php"><button>Hapus</button></a>
+        </td>
+
 
     </tr>
     </table>
