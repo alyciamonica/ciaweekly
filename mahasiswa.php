@@ -1,3 +1,29 @@
+<?php
+
+
+//API
+$koneksi = mysqli_connect("localhost", "root", "", "ciaweekly");
+
+$query = "SELECT * FROM mahasiswa";
+
+$result = mysqli_query ($koneksi, $query); ///lemari isi data
+
+///ambil data (fetch) dari lemari
+///mysqli_fetch_row array number
+///mysqli_fetch_assoc
+///mysqli_fetch_array
+///mysqli_fetch_object
+
+// while ($mahasiswa = mysqli_fetch_assoc ($result))
+// {
+//     var_dump($mahasiswa);
+// }
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +52,7 @@
         <button> Tambah data </button>
     </a>
     <table border = "1" cellpadding ="5">
+        
     <tr>
         <th> No </th>
         <th> Nama </th>
@@ -36,37 +63,30 @@
         <th> Foto </th>
         <th> Aksi </th>
     </tr>
-    
+
+    <?php
+        while ($mahasiswa = mysqli_fetch_assoc ($result))
+            {
+
+    ?>
     <tr>
         <td>1</td>
-        <td>Alycia Monica Devi</td>
-        <td>13242520037</td>
-        <td  align= "center" > Teknologi Informasi </td>
-        <td  align= "center" > alyciamonicadevi@gmail.com </td>
-        <td  align= "center" > 081233634673</td>
-        <td><img src="asset/image/cia.jpg" width="70px" /></td>
+        <td> <?php echo $mahasiswa ["nama"] ?> </td>
+        <td> <?php echo $mahasiswa ["nim"] ?></td>
+        <td  align= "center" ><?php echo $mahasiswa ["jurusan"] ?></td>
+        <td  align= "center" ><?php echo $mahasiswa ["email"] ?></td>
+        <td  align= "center" ><?php echo $mahasiswa ["no_hp"] ?></td>
+        <td><img src="asset/image/<?php echo $mahasiswa ["foto"] ?>width="70px" /></td>
 
          <td>
             <a href ="editdata.php"><button>Edit</button></a>
             <a href ="deletedata.php"><button>Hapus</button></a>
         </td>
-        
-    <tr>
-        <td>1</td>
-        <td>Marcel Bima </td>
-        <td>13242545672</td>
-        <td  align= "center" > Teknik Sipil </td>
-        <td  align= "center" > marcelbima@gmail.com </td>
-        <td  align= "center" > 081234535671 </td>
-        <td><img src="asset/image/cia.jpg" width="70px" /></td>
+    <?php
+            }
 
-        <td>
-            <a href ="editdata.php"><button>Edit</button></a>
-            <a href ="deletedata.php"><button>Hapus</button></a>
-        </td>
+    ?>
 
-
-    </tr>
     </table>
     <hr>
     <table border = "1" cellpadding = "15">
