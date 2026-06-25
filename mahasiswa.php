@@ -2,12 +2,13 @@
 
 
 //API
-$koneksi = mysqli_connect("localhost", "root", "", "ciaweekly");
+require 'fungsi.php';
 
-$query = "SELECT * FROM mahasiswa";
+$query = "SELECT * FROM mahasiswa"; ///perintah
+///$result = mysqli_query ($koneksi, $query); ///lemari isi data
 
-$result = mysqli_query ($koneksi, $query); ///lemari isi data
-
+tampildata($query); ///teman kita masuk ke rumah
+$mahasiswas = tampildata($query);
 ///ambil data (fetch) dari lemari
 ///mysqli_fetch_row array number
 ///mysqli_fetch_assoc
@@ -59,19 +60,20 @@ $result = mysqli_query ($koneksi, $query); ///lemari isi data
         <th> NIM </th>
         <th> Jurusan </th>
         <th> Email </th>
-        <th> No.HP </th>
+        <th> No_HP </th>
         <th> Foto </th>
         <th> Aksi </th>
     </tr>
 
     <?php
-        while ($mahasiswa = mysqli_fetch_assoc ($result))
+        $no=1;
+        foreach ($mahasiswas as $mahasiswa)
             {
 
     ?>
     <tr>
-        <td>1</td>
-        <td> <?php echo $mahasiswa ["nama"] ?> </td>
+        <td><?=$no?></td>
+        <td> <?php echo $mahasiswa ["nama"] ?></td>
         <td> <?php echo $mahasiswa ["nim"] ?></td>
         <td  align= "center" ><?php echo $mahasiswa ["jurusan"] ?></td>
         <td  align= "center" ><?php echo $mahasiswa ["email"] ?></td>
@@ -83,7 +85,9 @@ $result = mysqli_query ($koneksi, $query); ///lemari isi data
             <a href ="deletedata.php"><button>Hapus</button></a>
         </td>
     <?php
-            }
+        $no++;
+
+        }
 
     ?>
 
