@@ -60,7 +60,7 @@ $mahasiswas = tampildata($query);
         <th> NIM </th>
         <th> Jurusan </th>
         <th> Email </th>
-        <th> No_HP </th>
+        <th> No HP </th>
         <th> Foto </th>
         <th> Aksi </th>
     </tr>
@@ -78,11 +78,11 @@ $mahasiswas = tampildata($query);
         <td  align= "center" ><?php echo $mahasiswa ["jurusan"] ?></td>
         <td  align= "center" ><?php echo $mahasiswa ["email"] ?></td>
         <td  align= "center" ><?php echo $mahasiswa ["no_hp"] ?></td>
-        <td><img src="asset/image/<?php echo $mahasiswa ["foto"] ?>width="70px" /></td>
+        <td><img src="asset/image/<?php echo $mahasiswa ["foto"] ?>" width="70px" /></td>
 
          <td>
-            <a href ="editdata.php"><button>Edit</button></a>
-            <a href ="deletedata.php"><button>Hapus</button></a>
+            <a href ="editdata.php?id=<?php echo $mahasiswa["id"]?>"><button>Edit</button></a>
+            <a href ="deletedata.php?id=<?php echo $mahasiswa["id"]?>" onclick="return confirm('yakinnnnn?') "><button>Hapus</button></a>
         </td>
     <?php
         $no++;
